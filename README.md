@@ -1,4 +1,4 @@
-# Hi, I'm Miguel 👋🏼  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=28&pause=500&duration=3000&color=C9D1D9&vCenter=true&width=280&height=45&lines=a+data+scientist;an+AI+engineer;a+founder;a+weightlifter+🏋️" alt="Typing SVG" style="vertical-align: middle;" />
+# Hi, I'm Miguel 👋🏼  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=28&pause=500&duration=3000&color=C9D1D9&vCenter=true&width=280&height=45&lines=a+data+scientist;an+AI+engineer;a+founder;a+weightlifter+🏋️" alt="Typing SVG" style="vertical-align: middle;" />
 
 
 I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for startups and enterprise teams.
@@ -6,15 +6,15 @@ I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for s
 - **Industries:** Automotive, Manufacturing, AgriTech, and MedTech
 - **Focus:** Production-ready AI systems that work under real-world pressure
 
-**Let's connect on [LinkedIn](https://www.linkedin.com/in/miguelmirandadias/)** or check out some of my work below.
+**Let's connect on <a href="https://www.linkedin.com/in/miguelmirandadias/" target="_blank">LinkedIn</a>** or check out some of my work below.
 
 
 ## 🎯 Recent Case Studies
 
-- Patent trend analysis with multi-LLM workflow sliced diligence time by ~90% → [here](https://miguelmirandadias.com/portfolio/projects/project-patent-trend-analytics/)
-- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → [here](https://miguelmirandadias.com/portfolio/projects/project-local-chatbot/)
+- Patent trend analysis with multi-LLM workflow sliced diligence time by ~90% → <a href="https://miguelmirandadias.com/portfolio/projects/project-patent-trend-analytics/" target="_blank">here</a>
+- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → <a href="https://miguelmirandadias.com/portfolio/projects/project-local-chatbot/" target="_blank">here</a>
 - Customer Care Automation with multi-Agent workflow → [here]()
-- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](https://miguelmirandadias.com/portfolio/projects/project-ergonomic-assessment/)
+- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → <a href="https://miguelmirandadias.com/portfolio/projects/project-ergonomic-assessment/" target="_blank">here</a>
 
 
 ## 🛠️ Tech Stack
@@ -37,7 +37,7 @@ Most deliverables live inside private repositories, client-controlled GitHub org
 
 ## 🤝 Want to Work Together?
 
-**[Hire me on Upwork](https://www.upwork.com/freelancers/miguelmirandadias?mp_source=share)** or **[book a call](https://calendar.app.google/LpmPRXTyegjjyWoF8)** to discuss your project.
+**<a href="https://www.upwork.com/freelancers/miguelmirandadias?mp_source=share" target="_blank">Hire me on Upwork</a>** or **<a href="https://calendar.app.google/LpmPRXTyegjjyWoF8" target="_blank">book a call</a>** to discuss your project.
 
 
 
