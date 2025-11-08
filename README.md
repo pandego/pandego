@@ -1,4 +1,4 @@
-# Hi, I'm Miguel 👋🏼  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=28&pause=500&color=C9D1D9&vCenter=true&width=280&height=45&lines=a+data+scientist;an+AI+engineer;a+founder;a+weightlifter+🏋️" alt="Typing SVG" />
+# Hi, I'm Miguel 👋🏼  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=28&pause=500&duration=3000&color=C9D1D9&vCenter=true&width=280&height=45&lines=a+data+scientist;an+AI+engineer;a+founder;a+weightlifter+🏋️" alt="Typing SVG" style="vertical-align: middle;" />
 
 
 I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for startups and enterprise teams.
