@@ -1,5 +1,4 @@
-# Hi, I'm Miguel 👋🏼  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=28&pause=500&duration=3000&color=C9D1D9&vCenter=true&width=280&height=45&lines=a+data+scientist;an+AI+engineer;a+founder;a+weightlifter+🏋️" alt="Typing SVG" style="vertical-align: middle;" />
-
+# Hi, I'm Miguel 👋🏼 and I build AI systems!
 
 I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for startups and enterprise teams.
 - **What I build:** LLM applications like copilots, RAG systems, and multi-agent workflows
@@ -24,7 +23,7 @@ My tech stack combines modern AI with production-proven tools:
 - **LLMs**: OpenAI, Anthropic Claude, Google Gemini, Groq, Qwen
 - **AI Agent Orchestration**: LangChain, LangGraph, PyDanticAI
 - **Vector Database**: PostgreSQL (pgvector), Supabase, Pinecone, Qdrant
-- **Monitoring & Evals**: Custom observability pipelines, LangFuse, Arize Phoenix, GuardrailsAI
+- **Monitoring & Evals**: Custom observability pipelines, LangSmith, LangFuse, Arize Phoenix, GuardrailsAI
 - **Data/Infrastructure**: Python, Docker, FastAPI, REST, MCP, GitHub Actions, Pydantic, CI/CD, Azure, Databricks
 - **Machine Learning**: Scikit-learn, Pandas, NumPy, XGBoost, PyCaret, PyTorch/Lightning
 - **Specialties**: Context Engineering, RAG & Vision-RAG Systems, Multi-Agent Workflows
