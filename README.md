@@ -1,6 +1,6 @@
 # Hi, I'm Miguel 👋🏼 and I build AI systems!
 
-I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for startups and enterprise teams.
+I'm a Data Scientist and certified AI Engineer with 10+ years building AI systems for startups and enterprise teams.
 - **What I build:** LLM applications like copilots, RAG systems, and multi-agent workflows
 - **Industries:** Automotive, Manufacturing, AgriTech, and MedTech
 - **Focus:** Production-ready AI systems that work under real-world pressure
@@ -10,10 +10,11 @@ I'm a Data Scientist turned AI Engineer with 10+ years building AI systems for s
 
 ## 🎯 Recent Case Studies
 
-- Patent trend analysis with multi-LLM workflow sliced diligence time by ~90% → <a href="https://miguelmirandadias.com/portfolio/projects/project-patent-trend-analytics/" target="_blank" rel="noopener noreferrer">here</a>
-- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → <a href="https://miguelmirandadias.com/portfolio/projects/project-local-chatbot/" target="_blank" rel="noopener noreferrer">here</a>
+- Automated Patent Trend Intelligence with multi-LLM workflow sliced diligence time by ~90% → [here](https://github.com/pandego/patent-trend-analysis-using-llm)
+- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → [here](https://miguelmirandadias.com/portfolio/projects/project-local-chatbot)
+- AI Agent for SQL-Based Data Retrieval and Exploratory Data Analysis → [here]()
 - Customer Care Automation with multi-Agent workflow → [here]()
-- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → <a href="https://miguelmirandadias.com/portfolio/projects/project-ergonomic-assessment/" target="_blank" rel="noopener noreferrer">here</a>
+- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](https://miguelmirandadias.com/portfolio/projects/project-ergonomic-assessment)
 
 
 ## 🛠️ Tech Stack
