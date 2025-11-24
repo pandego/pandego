@@ -11,10 +11,10 @@ I'm a Data Scientist and certified AI Engineer with 10+ years building AI system
 ## 🎯 Recent Case Studies
 
 - Automated Patent Trend Intelligence with multi-LLM workflow sliced diligence time by ~90% → [here](https://github.com/pandego/patent-trend-analysis-using-llm)
-- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → [here](https://miguelmirandadias.com/portfolio/projects/project-local-chatbot)
+- On-prem AI chatbot for 300+ employees, keeping data sovereign while cutting onboarding time by ~70% → [here](https://github.com/pandego/secure-entreprise-ai-assistant)
 - AI Agent for SQL-Based Data Retrieval and Exploratory Data Analysis → [here]()
 - Customer Care Automation with multi-Agent workflow → [here]()
-- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](https://miguelmirandadias.com/portfolio/projects/project-ergonomic-assessment)
+- Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](ai-powered-ergonomic-assessment-with-3d-skeleton-tracking)
 
 
 ## 🛠️ Tech Stack
