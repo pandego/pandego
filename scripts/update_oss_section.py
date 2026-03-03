@@ -46,8 +46,18 @@ def build_section(prs: list[dict]) -> str:
     prs_md = "\n".join(lines) if lines else "- _No merged PRs found yet._"
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
+    badge_links = []
+    for r in repos[:6]:
+        owner, name = r.split("/", 1)
+        badge_links.append(
+            f"<a href=\"https://github.com/{r}\"><img src=\"https://img.shields.io/badge/{owner}-{name}-181717?style=for-the-badge&logo=github\" alt=\"{r}\" /></a>"
+        )
+    badges_html = "\n".join(badge_links) if badge_links else "<em>Updating...</em>"
+
     return f"""{START}
 ## 🧩 OSS Contributor Activity (auto-updated)
+
+<div align=\"left\">\n{badges_html}\n</div>
 
 **Active repos:** {repos_md}
 
@@ -62,16 +72,15 @@ def update_readme(section: str):
     with open(README_PATH, "r", encoding="utf-8") as f:
         readme = f.read()
 
-    pattern = re.compile(rf"{re.escape(START)}.*?{re.escape(END)}", re.S)
-    if pattern.search(readme):
-        readme = pattern.sub(section, readme)
+    pattern = re.compile(rf"\n?{re.escape(START)}.*?{re.escape(END)}\n?", re.S)
+    readme = pattern.sub("\n", readme)
+
+    insert_before = "## 🔐 About Private Work"
+    idx = readme.find(insert_before)
+    if idx == -1:
+        readme = readme + "\n\n" + section + "\n"
     else:
-        insert_after = "## 🛠️ Tech Stack"
-        idx = readme.find(insert_after)
-        if idx == -1:
-            readme = readme + "\n\n" + section + "\n"
-        else:
-            readme = readme[:idx] + section + "\n\n" + readme[idx:]
+        readme = readme[:idx].rstrip() + "\n\n" + section + "\n\n" + readme[idx:]
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(readme)

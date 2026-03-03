@@ -17,8 +17,26 @@ I'm a Data Scientist and certified AI Engineer with 10+ years building AI system
 - Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](https://github.com/pandego/ai-powered-ergonomic-assessment-with-3d-skeleton-tracking)
 
 
+## 🛠️ Tech Stack
+
+My tech stack combines modern AI with production-proven tools:
+
+- **LLMs**: OpenAI, Anthropic Claude, Google Gemini, Groq, Qwen
+- **AI Agent Orchestration**: LangChain, LangGraph, PyDanticAI
+- **Vector Database**: PostgreSQL (pgvector), Supabase, Pinecone, Qdrant
+- **Monitoring & Evals**: Custom observability pipelines, LangSmith, LangFuse, Arize Phoenix, GuardrailsAI
+- **Data/Infrastructure**: Python, Docker, FastAPI, REST, MCP, GitHub Actions, Pydantic, CI/CD, Azure, Databricks
+- **Machine Learning**: Scikit-learn, Pandas, NumPy, XGBoost, PyCaret, PyTorch/Lightning
+- **Specialties**: Context Engineering, RAG & Vision-RAG Systems, Multi-Agent Workflows
+
 <!-- OSS_START -->
 ## 🧩 OSS Contributor Activity (auto-updated)
+
+<div align="left">
+<a href="https://github.com/Arize-ai/phoenix"><img src="https://img.shields.io/badge/Arize-ai-phoenix-181717?style=for-the-badge&logo=github" alt="Arize-ai/phoenix" /></a>
+<a href="https://github.com/openclaw/openclaw"><img src="https://img.shields.io/badge/openclaw-openclaw-181717?style=for-the-badge&logo=github" alt="openclaw/openclaw" /></a>
+<a href="https://github.com/VoltAgent/voltagent"><img src="https://img.shields.io/badge/VoltAgent-voltagent-181717?style=for-the-badge&logo=github" alt="VoltAgent/voltagent" /></a>
+</div>
 
 **Active repos:** `Arize-ai/phoenix`, `openclaw/openclaw`, `VoltAgent/voltagent`
 
@@ -32,21 +50,8 @@ I'm a Data Scientist and certified AI Engineer with 10+ years building AI system
 - [openclaw/openclaw#24933](https://github.com/openclaw/openclaw/pull/24933) — fix(plugins): handle legacy schemas without toJSONSchema
 - [Arize-ai/phoenix#11685](https://github.com/Arize-ai/phoenix/pull/11685) — fix(ui): resolve additional jsx-a11y violations
 
-_Last updated: 2026-03-03 15:03 UTC_
+_Last updated: 2026-03-03 15:25 UTC_
 <!-- OSS_END -->
-
-## 🛠️ Tech Stack
-
-My tech stack combines modern AI with production-proven tools:
-
-- **LLMs**: OpenAI, Anthropic Claude, Google Gemini, Groq, Qwen
-- **AI Agent Orchestration**: LangChain, LangGraph, PyDanticAI
-- **Vector Database**: PostgreSQL (pgvector), Supabase, Pinecone, Qdrant
-- **Monitoring & Evals**: Custom observability pipelines, LangSmith, LangFuse, Arize Phoenix, GuardrailsAI
-- **Data/Infrastructure**: Python, Docker, FastAPI, REST, MCP, GitHub Actions, Pydantic, CI/CD, Azure, Databricks
-- **Machine Learning**: Scikit-learn, Pandas, NumPy, XGBoost, PyCaret, PyTorch/Lightning
-- **Specialties**: Context Engineering, RAG & Vision-RAG Systems, Multi-Agent Workflows
-
 
 ## 🔐 About Private Work
 
