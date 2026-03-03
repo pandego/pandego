@@ -17,6 +17,24 @@ I'm a Data Scientist and certified AI Engineer with 10+ years building AI system
 - Plant-wide ergonomics assessment time reduced from 12 months to 3 weeks with 3D pose-estimation → [here](https://github.com/pandego/ai-powered-ergonomic-assessment-with-3d-skeleton-tracking)
 
 
+<!-- OSS_START -->
+## 🧩 OSS Contributor Activity (auto-updated)
+
+**Active repos:** `Arize-ai/phoenix`, `openclaw/openclaw`, `VoltAgent/voltagent`
+
+**Recent merged PRs:**
+- [Arize-ai/phoenix#11811](https://github.com/Arize-ai/phoenix/pull/11811) — docs(evals): add TypeScript custom LLM evaluator example
+- [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
+- [openclaw/openclaw#27232](https://github.com/openclaw/openclaw/pull/27232) — fix(slack): reconnect socket mode after disconnect
+- [VoltAgent/voltagent#1110](https://github.com/VoltAgent/voltagent/pull/1110) — fix(langfuse-exporter): update langfuse sdk to handle non-JSON error responses
+- [Arize-ai/phoenix#11729](https://github.com/Arize-ai/phoenix/pull/11729) — fix(playground): avoid anthropic reasoning menu reshaping
+- [openclaw/openclaw#26253](https://github.com/openclaw/openclaw/pull/26253) — Docker/docs: reduce docker build OOM risk on small GCP hosts
+- [openclaw/openclaw#24933](https://github.com/openclaw/openclaw/pull/24933) — fix(plugins): handle legacy schemas without toJSONSchema
+- [Arize-ai/phoenix#11685](https://github.com/Arize-ai/phoenix/pull/11685) — fix(ui): resolve additional jsx-a11y violations
+
+_Last updated: 2026-03-03 15:02 UTC_
+<!-- OSS_END -->
+
 ## 🛠️ Tech Stack
 
 My tech stack combines modern AI with production-proven tools:
