@@ -32,14 +32,6 @@ My tech stack combines modern AI with production-proven tools:
 <!-- OSS_START -->
 ## 🧩 OSS Contributor Activity (auto-updated)
 
-<div align="left">
-<a href="https://github.com/Arize-ai/phoenix"><img src="https://img.shields.io/badge/Arize-ai-phoenix-181717?style=for-the-badge&logo=github" alt="Arize-ai/phoenix" /></a>
-<a href="https://github.com/openclaw/openclaw"><img src="https://img.shields.io/badge/openclaw-openclaw-181717?style=for-the-badge&logo=github" alt="openclaw/openclaw" /></a>
-<a href="https://github.com/VoltAgent/voltagent"><img src="https://img.shields.io/badge/VoltAgent-voltagent-181717?style=for-the-badge&logo=github" alt="VoltAgent/voltagent" /></a>
-</div>
-
-**Active repos:** `Arize-ai/phoenix`, `openclaw/openclaw`, `VoltAgent/voltagent`
-
 **Recent merged PRs:**
 - [Arize-ai/phoenix#11811](https://github.com/Arize-ai/phoenix/pull/11811) — docs(evals): add TypeScript custom LLM evaluator example
 - [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
@@ -50,7 +42,7 @@ My tech stack combines modern AI with production-proven tools:
 - [openclaw/openclaw#24933](https://github.com/openclaw/openclaw/pull/24933) — fix(plugins): handle legacy schemas without toJSONSchema
 - [Arize-ai/phoenix#11685](https://github.com/Arize-ai/phoenix/pull/11685) — fix(ui): resolve additional jsx-a11y violations
 
-_Last updated: 2026-03-03 15:25 UTC_
+_Last updated: 2026-03-03 15:50 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work

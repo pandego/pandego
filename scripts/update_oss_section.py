@@ -42,24 +42,11 @@ def build_section(prs: list[dict]) -> str:
             repos.append(repo)
         lines.append(f"- [{repo}#{number}]({url}) — {title}")
 
-    repos_md = ", ".join(f"`{r}`" for r in repos[:12]) if repos else "_Updating..._"
     prs_md = "\n".join(lines) if lines else "- _No merged PRs found yet._"
     updated = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    badge_links = []
-    for r in repos[:6]:
-        owner, name = r.split("/", 1)
-        badge_links.append(
-            f"<a href=\"https://github.com/{r}\"><img src=\"https://img.shields.io/badge/{owner}-{name}-181717?style=for-the-badge&logo=github\" alt=\"{r}\" /></a>"
-        )
-    badges_html = "\n".join(badge_links) if badge_links else "<em>Updating...</em>"
-
     return f"""{START}
 ## 🧩 OSS Contributor Activity (auto-updated)
-
-<div align=\"left\">\n{badges_html}\n</div>
-
-**Active repos:** {repos_md}
 
 **Recent merged PRs:**
 {prs_md}
