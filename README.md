@@ -33,16 +33,16 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [exo-explore/exo#1645](https://github.com/exo-explore/exo/pull/1645) — fix(worker): emit error chunks when a runner dies mid-command
+- [DEEP-PolyU/LinearRAG#21](https://github.com/DEEP-PolyU/LinearRAG/pull/21) — feat: add opt-in fallback for attribute-style hub-entity queries
 - [Arize-ai/phoenix#11811](https://github.com/Arize-ai/phoenix/pull/11811) — docs(evals): add TypeScript custom LLM evaluator example
 - [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
 - [openclaw/openclaw#27232](https://github.com/openclaw/openclaw/pull/27232) — fix(slack): reconnect socket mode after disconnect
 - [VoltAgent/voltagent#1110](https://github.com/VoltAgent/voltagent/pull/1110) — fix(langfuse-exporter): update langfuse sdk to handle non-JSON error responses
 - [Arize-ai/phoenix#11729](https://github.com/Arize-ai/phoenix/pull/11729) — fix(playground): avoid anthropic reasoning menu reshaping
 - [openclaw/openclaw#26253](https://github.com/openclaw/openclaw/pull/26253) — Docker/docs: reduce docker build OOM risk on small GCP hosts
-- [openclaw/openclaw#24933](https://github.com/openclaw/openclaw/pull/24933) — fix(plugins): handle legacy schemas without toJSONSchema
-- [Arize-ai/phoenix#11685](https://github.com/Arize-ai/phoenix/pull/11685) — fix(ui): resolve additional jsx-a11y violations
 
-_Last updated: 2026-03-04 06:30 UTC_
+_Last updated: 2026-03-05 06:32 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
