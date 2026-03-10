@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
 - [PeonPing/peon-ping#319](https://github.com/PeonPing/peon-ping/pull/319) — feat: add configurable SSH audio routing modes
 - [exo-explore/exo#1645](https://github.com/exo-explore/exo/pull/1645) — fix(worker): emit error chunks when a runner dies mid-command
 - [DEEP-PolyU/LinearRAG#21](https://github.com/DEEP-PolyU/LinearRAG/pull/21) — feat: add opt-in fallback for attribute-style hub-entity queries
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
 - [openclaw/openclaw#27232](https://github.com/openclaw/openclaw/pull/27232) — fix(slack): reconnect socket mode after disconnect
 - [VoltAgent/voltagent#1110](https://github.com/VoltAgent/voltagent/pull/1110) — fix(langfuse-exporter): update langfuse sdk to handle non-JSON error responses
-- [Arize-ai/phoenix#11729](https://github.com/Arize-ai/phoenix/pull/11729) — fix(playground): avoid anthropic reasoning menu reshaping
 
-_Last updated: 2026-03-09 06:38 UTC_
+_Last updated: 2026-03-10 06:31 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
