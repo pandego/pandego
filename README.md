@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [aurelio-labs/semantic-router#656](https://github.com/aurelio-labs/semantic-router/pull/656) — docs: make notebooks 05 and 07 compatible with v0.1
 - [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
 - [PeonPing/peon-ping#319](https://github.com/PeonPing/peon-ping/pull/319) — feat: add configurable SSH audio routing modes
 - [exo-explore/exo#1645](https://github.com/exo-explore/exo/pull/1645) — fix(worker): emit error chunks when a runner dies mid-command
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [Arize-ai/phoenix#11811](https://github.com/Arize-ai/phoenix/pull/11811) — docs(evals): add TypeScript custom LLM evaluator example
 - [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
 - [openclaw/openclaw#27232](https://github.com/openclaw/openclaw/pull/27232) — fix(slack): reconnect socket mode after disconnect
-- [VoltAgent/voltagent#1110](https://github.com/VoltAgent/voltagent/pull/1110) — fix(langfuse-exporter): update langfuse sdk to handle non-JSON error responses
 
-_Last updated: 2026-03-12 06:34 UTC_
+_Last updated: 2026-03-13 06:33 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
