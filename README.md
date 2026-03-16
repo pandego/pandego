@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [pandego/personal-os#1](https://github.com/pandego/personal-os/pull/1) — chore: delete KANBAN.md
 - [jamiepine/voicebox#250](https://github.com/jamiepine/voicebox/pull/250) — docs: align local API port examples with current dev flow
 - [aurelio-labs/semantic-router#656](https://github.com/aurelio-labs/semantic-router/pull/656) — docs: make notebooks 05 and 07 compatible with v0.1
 - [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [exo-explore/exo#1645](https://github.com/exo-explore/exo/pull/1645) — fix(worker): emit error chunks when a runner dies mid-command
 - [DEEP-PolyU/LinearRAG#21](https://github.com/DEEP-PolyU/LinearRAG/pull/21) — feat: add opt-in fallback for attribute-style hub-entity queries
 - [Arize-ai/phoenix#11811](https://github.com/Arize-ai/phoenix/pull/11811) — docs(evals): add TypeScript custom LLM evaluator example
-- [openclaw/openclaw#29724](https://github.com/openclaw/openclaw/pull/29724) — fix(browser): cap managed tab count to prevent renderer buildup
 
-_Last updated: 2026-03-15 06:36 UTC_
+_Last updated: 2026-03-16 06:49 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
