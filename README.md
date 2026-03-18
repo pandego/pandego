@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [Arize-ai/phoenix#11684](https://github.com/Arize-ai/phoenix/pull/11684) — chore(ui): enable jsx-a11y plugin and fix storybook violations
 - [BerriAI/litellm#23727](https://github.com/BerriAI/litellm/pull/23727) — fix(langsmith): avoid no running event loop during sync init
 - [pandego/personal-os#1](https://github.com/pandego/personal-os/pull/1) — chore: delete KANBAN.md
 - [jamiepine/voicebox#250](https://github.com/jamiepine/voicebox/pull/250) — docs: align local API port examples with current dev flow
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
 - [PeonPing/peon-ping#319](https://github.com/PeonPing/peon-ping/pull/319) — feat: add configurable SSH audio routing modes
 - [exo-explore/exo#1645](https://github.com/exo-explore/exo/pull/1645) — fix(worker): emit error chunks when a runner dies mid-command
-- [DEEP-PolyU/LinearRAG#21](https://github.com/DEEP-PolyU/LinearRAG/pull/21) — feat: add opt-in fallback for attribute-style hub-entity queries
 
-_Last updated: 2026-03-17 06:40 UTC_
+_Last updated: 2026-03-18 06:40 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
