@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [jamiepine/voicebox#344](https://github.com/jamiepine/voicebox/pull/344) — fix: include changelog in docker web build
 - [agno-agi/agno#6855](https://github.com/agno-agi/agno/pull/6855) — [fix] fail fast for unsupported AWS_BEDROCK_API_KEY auth in Claude
 - [Arize-ai/phoenix#11684](https://github.com/Arize-ai/phoenix/pull/11684) — chore(ui): enable jsx-a11y plugin and fix storybook violations
 - [BerriAI/litellm#23727](https://github.com/BerriAI/litellm/pull/23727) — fix(langsmith): avoid no running event loop during sync init
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [jamiepine/voicebox#250](https://github.com/jamiepine/voicebox/pull/250) — docs: align local API port examples with current dev flow
 - [aurelio-labs/semantic-router#656](https://github.com/aurelio-labs/semantic-router/pull/656) — docs: make notebooks 05 and 07 compatible with v0.1
 - [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
-- [PeonPing/peon-ping#319](https://github.com/PeonPing/peon-ping/pull/319) — feat: add configurable SSH audio routing modes
 
-_Last updated: 2026-03-26 06:42 UTC_
+_Last updated: 2026-03-27 06:42 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
