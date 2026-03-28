@@ -33,16 +33,16 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [PrefectHQ/fastmcp#3631](https://github.com/PrefectHQ/fastmcp/pull/3631) — fix: HTTP request headers not accessible in background task workers
+- [deepset-ai/haystack#10953](https://github.com/deepset-ai/haystack/pull/10953) — fix: `UpdateByFilterAsyncTest`, `CountDocumentsByFilterAsyncTest`, `CountUniqueMetadataByFilterAsyncTest`
+- [deepset-ai/haystack#10952](https://github.com/deepset-ai/haystack/pull/10952) — fix: `DeleteAllAsyncTest`, `DeleteByFilterAsyncTest`,
+- [deepset-ai/haystack#10948](https://github.com/deepset-ai/haystack/pull/10948) — fix: `CountDocumentsAsyncTest`, `WriteDocumentsAsyncTest`, `WriteDocumentsAsyncTest`
+- [PrefectHQ/fastmcp#3632](https://github.com/PrefectHQ/fastmcp/pull/3632) — fix(server): preserve mounted tool task metadata
 - [jamiepine/voicebox#344](https://github.com/jamiepine/voicebox/pull/344) — fix: include changelog in docker web build
 - [agno-agi/agno#6855](https://github.com/agno-agi/agno/pull/6855) — [fix] fail fast for unsupported AWS_BEDROCK_API_KEY auth in Claude
 - [Arize-ai/phoenix#11684](https://github.com/Arize-ai/phoenix/pull/11684) — chore(ui): enable jsx-a11y plugin and fix storybook violations
-- [BerriAI/litellm#23727](https://github.com/BerriAI/litellm/pull/23727) — fix(langsmith): avoid no running event loop during sync init
-- [pandego/personal-os#1](https://github.com/pandego/personal-os/pull/1) — chore: delete KANBAN.md
-- [jamiepine/voicebox#250](https://github.com/jamiepine/voicebox/pull/250) — docs: align local API port examples with current dev flow
-- [aurelio-labs/semantic-router#656](https://github.com/aurelio-labs/semantic-router/pull/656) — docs: make notebooks 05 and 07 compatible with v0.1
-- [Arize-ai/phoenix#11805](https://github.com/Arize-ai/phoenix/pull/11805) — fix(server): handle boolean metadata filters in span DSL
 
-_Last updated: 2026-03-27 06:42 UTC_
+_Last updated: 2026-03-28 06:36 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
