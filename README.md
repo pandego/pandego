@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [agno-agi/agno#7303](https://github.com/agno-agi/agno/pull/7303) — [fix] correct SurrealDB flexible field syntax
 - [PrefectHQ/fastmcp#3631](https://github.com/PrefectHQ/fastmcp/pull/3631) — fix: HTTP request headers not accessible in background task workers
 - [deepset-ai/haystack#10953](https://github.com/deepset-ai/haystack/pull/10953) — fix: `UpdateByFilterAsyncTest`, `CountDocumentsByFilterAsyncTest`, `CountUniqueMetadataByFilterAsyncTest`
 - [deepset-ai/haystack#10952](https://github.com/deepset-ai/haystack/pull/10952) — fix: `DeleteAllAsyncTest`, `DeleteByFilterAsyncTest`,
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [PrefectHQ/fastmcp#3632](https://github.com/PrefectHQ/fastmcp/pull/3632) — fix(server): preserve mounted tool task metadata
 - [jamiepine/voicebox#344](https://github.com/jamiepine/voicebox/pull/344) — fix: include changelog in docker web build
 - [agno-agi/agno#6855](https://github.com/agno-agi/agno/pull/6855) — [fix] fail fast for unsupported AWS_BEDROCK_API_KEY auth in Claude
-- [Arize-ai/phoenix#11684](https://github.com/Arize-ai/phoenix/pull/11684) — chore(ui): enable jsx-a11y plugin and fix storybook violations
 
-_Last updated: 2026-04-03 06:42 UTC_
+_Last updated: 2026-04-04 06:38 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
