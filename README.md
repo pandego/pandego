@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [docker/docker-agent#2350](https://github.com/docker/docker-agent/pull/2350) — fix(openai): ignore empty websocket frames
 - [VoltAgent/voltagent#1189](https://github.com/VoltAgent/voltagent/pull/1189) — [fix] honor dev query bypass in hasConsoleAccess
 - [agno-agi/agno#7303](https://github.com/agno-agi/agno/pull/7303) — [fix] correct SurrealDB flexible field syntax
 - [PrefectHQ/fastmcp#3631](https://github.com/PrefectHQ/fastmcp/pull/3631) — fix: HTTP request headers not accessible in background task workers
@@ -40,9 +41,8 @@ My tech stack combines modern AI with production-proven tools:
 - [deepset-ai/haystack#10952](https://github.com/deepset-ai/haystack/pull/10952) — fix: `DeleteAllAsyncTest`, `DeleteByFilterAsyncTest`,
 - [deepset-ai/haystack#10948](https://github.com/deepset-ai/haystack/pull/10948) — fix: `CountDocumentsAsyncTest`, `WriteDocumentsAsyncTest`, `WriteDocumentsAsyncTest`
 - [PrefectHQ/fastmcp#3632](https://github.com/PrefectHQ/fastmcp/pull/3632) — fix(server): preserve mounted tool task metadata
-- [jamiepine/voicebox#344](https://github.com/jamiepine/voicebox/pull/344) — fix: include changelog in docker web build
 
-_Last updated: 2026-04-09 06:49 UTC_
+_Last updated: 2026-04-10 06:54 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
