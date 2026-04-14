@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [pydantic/pydantic-ai#5068](https://github.com/pydantic/pydantic-ai/pull/5068) — Fix Anthropic compaction usage totals
 - [docker/docker-agent#2386](https://github.com/docker/docker-agent/pull/2386) — fix(toolinstall): soft-fail auto-detect installs
 - [docker/docker-agent#2350](https://github.com/docker/docker-agent/pull/2350) — fix(openai): ignore empty websocket frames
 - [VoltAgent/voltagent#1189](https://github.com/VoltAgent/voltagent/pull/1189) — [fix] honor dev query bypass in hasConsoleAccess
@@ -42,9 +43,8 @@ My tech stack combines modern AI with production-proven tools:
 - [deepset-ai/haystack#10948](https://github.com/deepset-ai/haystack/pull/10948) — fix: `CountDocumentsAsyncTest`, `WriteDocumentsAsyncTest`, `WriteDocumentsAsyncTest`
 - [PrefectHQ/fastmcp#3632](https://github.com/PrefectHQ/fastmcp/pull/3632) — fix(server): preserve mounted tool task metadata
 - [PrefectHQ/fastmcp#3631](https://github.com/PrefectHQ/fastmcp/pull/3631) — fix: HTTP request headers not accessible in background task workers
-- [jamiepine/voicebox#344](https://github.com/jamiepine/voicebox/pull/344) — fix: include changelog in docker web build
 
-_Last updated: 2026-04-13 07:02 UTC_
+_Last updated: 2026-04-14 06:54 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
