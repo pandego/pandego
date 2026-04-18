@@ -44,7 +44,7 @@ My tech stack combines modern AI with production-proven tools:
 - [deepset-ai/haystack#10953](https://github.com/deepset-ai/haystack/pull/10953) — fix: `UpdateByFilterAsyncTest`, `CountDocumentsByFilterAsyncTest`, `CountUniqueMetadataByFilterAsyncTest`
 - [deepset-ai/haystack#10952](https://github.com/deepset-ai/haystack/pull/10952) — fix: `DeleteAllAsyncTest`, `DeleteByFilterAsyncTest`,
 
-_Last updated: 2026-04-17 06:56 UTC_
+_Last updated: 2026-04-18 06:42 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
