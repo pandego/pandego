@@ -33,6 +33,7 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Recent merged PRs:**
+- [gastownhall/beads#3456](https://github.com/gastownhall/beads/pull/3456) — fix: support Jira Cloud token pagination
 - [gastownhall/beads#3342](https://github.com/gastownhall/beads/pull/3342) — fix(init): bypass hooks for from-jsonl bootstrap commit
 - [PeonPing/peon-ping#477](https://github.com/PeonPing/peon-ping/pull/477) — fix: populate summary template from hook payload fallbacks
 - [agno-agi/agno#7553](https://github.com/agno-agi/agno/pull/7553) — [fix] narrow OpenAI native reasoning detection
@@ -42,9 +43,8 @@ My tech stack combines modern AI with production-proven tools:
 - [docker/docker-agent#2386](https://github.com/docker/docker-agent/pull/2386) — fix(toolinstall): soft-fail auto-detect installs
 - [docker/docker-agent#2350](https://github.com/docker/docker-agent/pull/2350) — fix(openai): ignore empty websocket frames
 - [pydantic/pydantic-ai#5014](https://github.com/pydantic/pydantic-ai/pull/5014) — Fix deferred tool search keyword matching
-- [VoltAgent/voltagent#1189](https://github.com/VoltAgent/voltagent/pull/1189) — [fix] honor dev query bypass in hasConsoleAccess
 
-_Last updated: 2026-04-24 06:57 UTC_
+_Last updated: 2026-04-25 06:46 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
