@@ -44,7 +44,7 @@ My tech stack combines modern AI with production-proven tools:
 - [pydantic/pydantic-ai#5068](https://github.com/pydantic/pydantic-ai/pull/5068) — Fix Anthropic compaction usage totals
 - [docker/docker-agent#2386](https://github.com/docker/docker-agent/pull/2386) — fix(toolinstall): soft-fail auto-detect installs
 
-_Last updated: 2026-04-26 06:56 UTC_
+_Last updated: 2026-04-27 07:11 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
