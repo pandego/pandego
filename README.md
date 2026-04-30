@@ -32,19 +32,40 @@ My tech stack combines modern AI with production-proven tools:
 <!-- OSS_START -->
 ## 🧩 OSS Contributor Activity (auto-updated)
 
-**Recent merged PRs:**
+**Projects contributed to:**
+- [openclaw/openclaw](https://github.com/openclaw/openclaw/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 4 merged PRs, 366,564 stars
+- [open-webui/open-webui](https://github.com/open-webui/open-webui/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 134,883 stars
+- [oobabooga/textgen](https://github.com/oobabooga/textgen/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 46,897 stars
+- [BerriAI/litellm](https://github.com/BerriAI/litellm/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 45,287 stars
+- [exo-explore/exo](https://github.com/exo-explore/exo/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 44,225 stars
+- [agno-agi/agno](https://github.com/agno-agi/agno/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 3 merged PRs, 39,810 stars
+- [deepset-ai/haystack](https://github.com/deepset-ai/haystack/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 3 merged PRs, 25,030 stars
+- [PrefectHQ/fastmcp](https://github.com/PrefectHQ/fastmcp/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 24,923 stars
+- [jamiepine/voicebox](https://github.com/jamiepine/voicebox/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 24,102 stars
+- [gastownhall/beads](https://github.com/gastownhall/beads/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 22,755 stars
+- [RightNow-AI/openfang](https://github.com/RightNow-AI/openfang/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 17,074 stars
+- [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 16,748 stars
+- [Arize-ai/phoenix](https://github.com/Arize-ai/phoenix/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 6 merged PRs, 9,485 stars
+- [VoltAgent/voltagent](https://github.com/VoltAgent/voltagent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 8,548 stars
+- [PeonPing/peon-ping](https://github.com/PeonPing/peon-ping/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 6 merged PRs, 4,627 stars
+- [aurelio-labs/semantic-router](https://github.com/aurelio-labs/semantic-router/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 3,469 stars
+- [docker/docker-agent](https://github.com/docker/docker-agent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 4 merged PRs, 2,870 stars
+- [DEEP-PolyU/LinearRAG](https://github.com/DEEP-PolyU/LinearRAG/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 477 stars
+- [afaqueumer/DocQA](https://github.com/afaqueumer/DocQA/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 296 stars
+
+**Latest merged PRs:**
+- [RightNow-AI/openfang#1114](https://github.com/RightNow-AI/openfang/pull/1114) — fix(kernel): avoid crashing idle reactive agents
+- [RightNow-AI/openfang#1080](https://github.com/RightNow-AI/openfang/pull/1080) — fix: expose MiniMax in openfang init
 - [PeonPing/peon-ping#498](https://github.com/PeonPing/peon-ping/pull/498) — fix: sync and honor OpenCode category config
 - [PeonPing/peon-ping#497](https://github.com/PeonPing/peon-ping/pull/497) — fix: allow disabling terminal tab titles
+- [PeonPing/peon-ping#480](https://github.com/PeonPing/peon-ping/pull/480) — fix(nix): add optional Claude Code hook setup
 - [PeonPing/peon-ping#491](https://github.com/PeonPing/peon-ping/pull/491) — fix: tighten Linux terminal focus detection
 - [gastownhall/beads#3456](https://github.com/gastownhall/beads/pull/3456) — fix: support Jira Cloud token pagination
-- [RightNow-AI/openfang#1114](https://github.com/RightNow-AI/openfang/pull/1114) — fix(kernel): avoid crashing idle reactive agents
-- [PeonPing/peon-ping#480](https://github.com/PeonPing/peon-ping/pull/480) — fix(nix): add optional Claude Code hook setup
 - [gastownhall/beads#3342](https://github.com/gastownhall/beads/pull/3342) — fix(init): bypass hooks for from-jsonl bootstrap commit
+- [docker/docker-agent#2442](https://github.com/docker/docker-agent/pull/2442) — fix(otel): align service resource schema
 - [PeonPing/peon-ping#477](https://github.com/PeonPing/peon-ping/pull/477) — fix: populate summary template from hook payload fallbacks
-- [RightNow-AI/openfang#1080](https://github.com/RightNow-AI/openfang/pull/1080) — fix: expose MiniMax in openfang init
-- [agno-agi/agno#7553](https://github.com/agno-agi/agno/pull/7553) — [fix] narrow OpenAI native reasoning detection
 
-_Last updated: 2026-04-30 07:09 UTC_
+_Last updated: 2026-04-30 08:53 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
