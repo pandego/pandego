@@ -37,14 +37,14 @@ My tech stack combines modern AI with production-proven tools:
 - [PeonPing/peon-ping#497](https://github.com/PeonPing/peon-ping/pull/497) — fix: allow disabling terminal tab titles
 - [PeonPing/peon-ping#491](https://github.com/PeonPing/peon-ping/pull/491) — fix: tighten Linux terminal focus detection
 - [gastownhall/beads#3456](https://github.com/gastownhall/beads/pull/3456) — fix: support Jira Cloud token pagination
+- [RightNow-AI/openfang#1114](https://github.com/RightNow-AI/openfang/pull/1114) — fix(kernel): avoid crashing idle reactive agents
 - [PeonPing/peon-ping#480](https://github.com/PeonPing/peon-ping/pull/480) — fix(nix): add optional Claude Code hook setup
 - [gastownhall/beads#3342](https://github.com/gastownhall/beads/pull/3342) — fix(init): bypass hooks for from-jsonl bootstrap commit
 - [PeonPing/peon-ping#477](https://github.com/PeonPing/peon-ping/pull/477) — fix: populate summary template from hook payload fallbacks
+- [RightNow-AI/openfang#1080](https://github.com/RightNow-AI/openfang/pull/1080) — fix: expose MiniMax in openfang init
 - [agno-agi/agno#7553](https://github.com/agno-agi/agno/pull/7553) — [fix] narrow OpenAI native reasoning detection
-- [docker/docker-agent#2448](https://github.com/docker/docker-agent/pull/2448) — fix(mcp): reuse discovered auth server for token refresh
-- [docker/docker-agent#2442](https://github.com/docker/docker-agent/pull/2442) — fix(otel): align service resource schema
 
-_Last updated: 2026-04-29 07:06 UTC_
+_Last updated: 2026-04-30 07:09 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
