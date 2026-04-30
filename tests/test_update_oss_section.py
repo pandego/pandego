@@ -32,8 +32,10 @@ class BuildSectionTests(unittest.TestCase):
         section = build_section(prs, updated_at="2026-04-30 10:00 UTC")
 
         self.assertIn("**Projects contributed to:**", section)
-        self.assertIn("[acme/widgets](https://github.com/acme/widgets/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 2 merged PRs, 10 stars", section)
-        self.assertIn("[other/tooling](https://github.com/other/tooling/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) — 1 merged PR, 900 stars", section)
+        self.assertIn("[acme/widgets](https://github.com/acme/widgets/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10 stars)", section)
+        self.assertIn("[other/tooling](https://github.com/other/tooling/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (900 stars)", section)
+        self.assertNotIn("merged PRs,", section)
+        self.assertNotIn(" — ", section.split("**Latest merged PRs:**", 1)[0])
         self.assertLess(section.index("other/tooling"), section.index("acme/widgets"))
         self.assertIn("**Latest merged PRs:**", section)
         self.assertIn("[acme/widgets#12](https://github.com/acme/widgets/pull/12) — fix one", section)

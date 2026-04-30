@@ -157,10 +157,8 @@ def build_project_lines(prs: list[dict]) -> list[str]:
     )
     lines = []
     for repo, data in sorted_projects:
-        count = int(data["count"])
         stars = int(data["stars"])
-        plural = "PR" if count == 1 else "PRs"
-        lines.append(f"- [{repo}]({merged_pr_filter_url(repo)}) — {count} merged {plural}, {format_stars(stars)}")
+        lines.append(f"- [{repo}]({merged_pr_filter_url(repo)}) ({format_stars(stars)})")
     return lines
 
 
