@@ -9,6 +9,8 @@ import urllib.parse
 import urllib.request
 from typing import Optional
 
+PR_URL_RE = re.compile(r"https://github\.com/([^\s/]+/[^\s/]+)/pull/(\d+)")
+
 USERNAME = "pandego"
 README_PATH = "README.md"
 START = "<!-- OSS_START -->"
@@ -50,7 +52,7 @@ def fetch_merged_prs(token: str, limit: int = 1000):
             "--limit",
             str(limit),
             "--json",
-            "repository,number,title,url",
+            "repository,number,title,url,closedAt,updatedAt",
             "--",
             f"-user:{USERNAME}",
         ]
@@ -65,9 +67,10 @@ def fetch_merged_prs(token: str, limit: int = 1000):
                     "html_url": pr.get("url", ""),
                     "number": pr.get("number"),
                     "repository_url": f"https://api.github.com/repos/{repo}" if repo else "",
+                    "sort_at": pr.get("closedAt") or pr.get("updatedAt") or "",
                 }
             )
-        return enrich_repository_stars(normalized, token)
+        return normalized
 
     q = f"is:pr author:{USERNAME} is:merged -user:{USERNAME}"
     items = []
@@ -85,10 +88,87 @@ def fetch_merged_prs(token: str, limit: int = 1000):
             },
         )
         page_items = data.get("items", [])
+        for pr in page_items:
+            pr["sort_at"] = pr.get("closed_at") or pr.get("updated_at") or ""
         items.extend(page_items)
         if len(page_items) < per_page or len(items) >= limit:
             break
-    return enrich_repository_stars(items[:limit], token)
+    return items[:limit]
+
+
+def fetch_bot_landed_prs(limit: int = 100):
+    """Find PRs landed by project merge bots as authored commits.
+
+    Some projects, notably PyTorch, close PRs after a bot-created landing commit.
+    Those PRs are not returned by GitHub's merged PR search even though the commit
+    is correctly authored by the contributor.
+    """
+    if not shutil.which("gh"):
+        return []
+
+    cmd = [
+        "gh",
+        "search",
+        "commits",
+        "--author",
+        USERNAME,
+        "--sort",
+        "committer-date",
+        "--order",
+        "desc",
+        "--limit",
+        str(min(limit, 100)),
+        "--json",
+        "sha,url,commit,repository,author",
+    ]
+    try:
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError:
+        return []
+
+    normalized = []
+    for item in json.loads(result.stdout):
+        if (item.get("author") or {}).get("login") != USERNAME:
+            continue
+
+        commit = item.get("commit") or {}
+        message = commit.get("message", "")
+        match = PR_URL_RE.search(message)
+        if not match or "Pull Request resolved:" not in message:
+            continue
+
+        repo, number = match.groups()
+        if is_owned_repo(repo):
+            continue
+
+        title = message.splitlines()[0].strip()
+        title = re.sub(rf"\s*\(#{number}\)$", "", title)
+        normalized.append(
+            {
+                "title": title,
+                "html_url": f"https://github.com/{repo}/pull/{number}",
+                "number": int(number),
+                "repository_url": f"https://api.github.com/repos/{repo}",
+                "sort_at": (commit.get("committer") or {}).get("date", ""),
+            }
+        )
+
+    return normalized
+
+
+def fetch_contribution_prs(token: str, limit: int = 1000):
+    prs = fetch_merged_prs(token, limit=limit)
+    prs.extend(fetch_bot_landed_prs(limit=100))
+
+    deduped = {}
+    for pr in prs:
+        repo = pr_repo_name(pr)
+        key = (repo, pr.get("number"))
+        if key not in deduped or pr.get("sort_at", "") > deduped[key].get("sort_at", ""):
+            deduped[key] = pr
+
+    sorted_prs = sorted(deduped.values(), key=lambda pr: pr.get("sort_at", ""), reverse=True)
+    return enrich_repository_stars(sorted_prs, token)
 
 
 def is_owned_repo(repo_full_name: str) -> bool:
@@ -132,8 +212,8 @@ def format_stars(stars: int) -> str:
     return f"{stars:,} stars"
 
 
-def merged_pr_filter_url(repo_full_name: str) -> str:
-    query = urllib.parse.urlencode({"q": f"is:pr is:merged author:{USERNAME}"})
+def accepted_pr_filter_url(repo_full_name: str) -> str:
+    query = urllib.parse.urlencode({"q": f"is:pr author:{USERNAME}"})
     return f"https://github.com/{repo_full_name}/pulls?{query}"
 
 
@@ -158,7 +238,7 @@ def build_project_lines(prs: list[dict]) -> list[str]:
     lines = []
     for repo, data in sorted_projects:
         stars = int(data["stars"])
-        lines.append(f"- [{repo}]({merged_pr_filter_url(repo)}) ({format_stars(stars)})")
+        lines.append(f"- [{repo}]({accepted_pr_filter_url(repo)}) ({format_stars(stars)})")
     return lines
 
 
@@ -169,7 +249,7 @@ def build_recent_pr_lines(prs: list[dict], limit: int = 10) -> list[str]:
         url = pr.get("html_url", "")
         number = pr.get("number")
         repo = pr_repo_name(pr)
-        lines.append(f"- [{repo}#{number}]({url}) — {title}")
+        lines.append(f"- [{repo}#{number}]({url}) - {title}")
         if len(lines) >= limit:
             break
     return lines
@@ -177,10 +257,10 @@ def build_recent_pr_lines(prs: list[dict], limit: int = 10) -> list[str]:
 
 def build_section(prs: list[dict], updated_at: Optional[str] = None) -> str:
     project_lines = build_project_lines(prs)
-    projects_md = "\n".join(project_lines) if project_lines else "- _No external merged PR projects found yet._"
+    projects_md = "\n".join(project_lines) if project_lines else "- _No external accepted PR projects found yet._"
 
     recent_lines = build_recent_pr_lines(prs, limit=10)
-    recent_md = "\n".join(recent_lines) if recent_lines else "- _No recent external merged PRs found yet._"
+    recent_md = "\n".join(recent_lines) if recent_lines else "- _No recent external accepted PRs found yet._"
 
     updated = updated_at or dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -190,7 +270,7 @@ def build_section(prs: list[dict], updated_at: Optional[str] = None) -> str:
 **Projects contributed to:**
 {projects_md}
 
-**Latest merged PRs:**
+**Latest accepted PRs:**
 {recent_md}
 
 _Last updated: {updated}_
@@ -217,7 +297,7 @@ def update_readme(section: str):
 
 if __name__ == "__main__":
     token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN") or ""
-    prs = fetch_merged_prs(token, limit=1000)
+    prs = fetch_contribution_prs(token, limit=1000)
     section = build_section(prs)
     update_readme(section)
     print("README OSS section updated")
