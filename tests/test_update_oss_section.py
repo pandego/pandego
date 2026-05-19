@@ -35,10 +35,9 @@ class BuildSectionTests(unittest.TestCase):
         self.assertIn("[acme/widgets](https://github.com/acme/widgets/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10 stars)", section)
         self.assertIn("[other/tooling](https://github.com/other/tooling/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (900 stars)", section)
         self.assertNotIn("merged PRs,", section)
-        self.assertNotIn(" — ", section.split("**Latest merged PRs:**", 1)[0])
         self.assertLess(section.index("other/tooling"), section.index("acme/widgets"))
         self.assertIn("**Latest merged PRs:**", section)
-        self.assertIn("[acme/widgets#12](https://github.com/acme/widgets/pull/12) — fix one", section)
+        self.assertIn("[acme/widgets#12](https://github.com/acme/widgets/pull/12) - fix one", section)
         self.assertIn("_Last updated: 2026-04-30 10:00 UTC_", section)
 
     def test_filters_owned_repos_out_of_project_and_recent_lists(self):

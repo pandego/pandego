@@ -158,7 +158,6 @@ def fetch_bot_landed_prs(limit: int = 100):
 
 def fetch_contribution_prs(token: str, limit: int = 1000):
     prs = fetch_merged_prs(token, limit=limit)
-    prs.extend(fetch_bot_landed_prs(limit=100))
 
     deduped = {}
     for pr in prs:
@@ -213,7 +212,7 @@ def format_stars(stars: int) -> str:
 
 
 def accepted_pr_filter_url(repo_full_name: str) -> str:
-    query = urllib.parse.urlencode({"q": f"is:pr author:{USERNAME}"})
+    query = urllib.parse.urlencode({"q": f"is:pr is:merged author:{USERNAME}"})
     return f"https://github.com/{repo_full_name}/pulls?{query}"
 
 
@@ -257,10 +256,10 @@ def build_recent_pr_lines(prs: list[dict], limit: int = 10) -> list[str]:
 
 def build_section(prs: list[dict], updated_at: Optional[str] = None) -> str:
     project_lines = build_project_lines(prs)
-    projects_md = "\n".join(project_lines) if project_lines else "- _No external accepted PR projects found yet._"
+    projects_md = "\n".join(project_lines) if project_lines else "- _No external merged PR projects found yet._"
 
     recent_lines = build_recent_pr_lines(prs, limit=10)
-    recent_md = "\n".join(recent_lines) if recent_lines else "- _No recent external accepted PRs found yet._"
+    recent_md = "\n".join(recent_lines) if recent_lines else "- _No recent external merged PRs found yet._"
 
     updated = updated_at or dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -270,7 +269,7 @@ def build_section(prs: list[dict], updated_at: Optional[str] = None) -> str:
 **Projects contributed to:**
 {projects_md}
 
-**Latest accepted PRs:**
+**Latest merged PRs:**
 {recent_md}
 
 _Last updated: {updated}_
