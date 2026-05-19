@@ -213,7 +213,7 @@ def format_stars(stars: int) -> str:
 
 
 def accepted_pr_filter_url(repo_full_name: str) -> str:
-    query = urllib.parse.urlencode({"q": f"is:pr author:{USERNAME}"})
+    query = urllib.parse.urlencode({"q": f"is:pr is:closed author:{USERNAME}"})
     return f"https://github.com/{repo_full_name}/pulls?{query}"
 
 

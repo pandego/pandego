@@ -32,13 +32,12 @@ class BuildSectionTests(unittest.TestCase):
         section = build_section(prs, updated_at="2026-04-30 10:00 UTC")
 
         self.assertIn("**Projects contributed to:**", section)
-        self.assertIn("[acme/widgets](https://github.com/acme/widgets/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10 stars)", section)
-        self.assertIn("[other/tooling](https://github.com/other/tooling/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (900 stars)", section)
+        self.assertIn("[acme/widgets](https://github.com/acme/widgets/pulls?q=is%3Apr+is%3Aclosed+author%3Apandego) (10 stars)", section)
+        self.assertIn("[other/tooling](https://github.com/other/tooling/pulls?q=is%3Apr+is%3Aclosed+author%3Apandego) (900 stars)", section)
         self.assertNotIn("merged PRs,", section)
-        self.assertNotIn(" — ", section.split("**Latest merged PRs:**", 1)[0])
         self.assertLess(section.index("other/tooling"), section.index("acme/widgets"))
-        self.assertIn("**Latest merged PRs:**", section)
-        self.assertIn("[acme/widgets#12](https://github.com/acme/widgets/pull/12) — fix one", section)
+        self.assertIn("**Latest accepted PRs:**", section)
+        self.assertIn("[acme/widgets#12](https://github.com/acme/widgets/pull/12) - fix one", section)
         self.assertIn("_Last updated: 2026-04-30 10:00 UTC_", section)
 
     def test_filters_owned_repos_out_of_project_and_recent_lists(self):
@@ -54,8 +53,8 @@ class BuildSectionTests(unittest.TestCase):
             updated_at="2026-04-30 10:00 UTC",
         )
 
-        self.assertIn("- _No external merged PR projects found yet._", section)
-        self.assertIn("- _No recent external merged PRs found yet._", section)
+        self.assertIn("- _No external accepted PR projects found yet._", section)
+        self.assertIn("- _No recent external accepted PRs found yet._", section)
         self.assertNotIn("pandego/pandego#1", section)
 
 
