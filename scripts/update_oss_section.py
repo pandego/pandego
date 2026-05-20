@@ -16,6 +16,8 @@ README_PATH = "README.md"
 START = "<!-- OSS_START -->"
 END = "<!-- OSS_END -->"
 OWNED_REPO_OWNERS = {USERNAME}
+BOT_LANDED_REPOS = {"pytorch/pytorch"}
+BOT_LANDED_LABEL = "Merged"
 
 
 def gh_get(url: str, token: str, params: Optional[dict] = None):
@@ -36,7 +38,38 @@ def gh_get(url: str, token: str, params: Optional[dict] = None):
         return json.loads(response.read().decode("utf-8"))
 
 
-def fetch_merged_prs(token: str, limit: int = 1000):
+def is_owned_repo(repo_full_name: str) -> bool:
+    owner = repo_full_name.split("/", 1)[0].lower() if "/" in repo_full_name else repo_full_name.lower()
+    return owner in {name.lower() for name in OWNED_REPO_OWNERS}
+
+
+def pr_repo_name(pr: dict) -> str:
+    repo_url = pr.get("repository_url", "")
+    return repo_url.split("/repos/")[-1] if "/repos/" in repo_url else ""
+
+
+def normalize_search_pr(pr: dict, acceptance: str = "merged") -> dict:
+    repo = (pr.get("repository") or {}).get("nameWithOwner", "")
+    return {
+        "title": pr.get("title", ""),
+        "html_url": pr.get("url", ""),
+        "number": pr.get("number"),
+        "repository_url": f"https://api.github.com/repos/{repo}" if repo else "",
+        "sort_at": pr.get("closedAt") or pr.get("updatedAt") or "",
+        "acceptance": acceptance,
+    }
+
+
+def dedupe_prs(prs: list[dict]) -> list[dict]:
+    deduped: dict[tuple[str, object], dict] = {}
+    for pr in prs:
+        key = (pr_repo_name(pr), pr.get("number"))
+        if key not in deduped or pr.get("sort_at", "") > deduped[key].get("sort_at", ""):
+            deduped[key] = pr
+    return sorted(deduped.values(), key=lambda pr: pr.get("sort_at", ""), reverse=True)
+
+
+def fetch_merged_prs(token: str, limit: int = 1000) -> list[dict]:
     if shutil.which("gh"):
         cmd = [
             "gh",
@@ -57,20 +90,7 @@ def fetch_merged_prs(token: str, limit: int = 1000):
             f"-user:{USERNAME}",
         ]
         result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-        items = json.loads(result.stdout)
-        normalized = []
-        for pr in items:
-            repo = (pr.get("repository") or {}).get("nameWithOwner", "")
-            normalized.append(
-                {
-                    "title": pr.get("title", ""),
-                    "html_url": pr.get("url", ""),
-                    "number": pr.get("number"),
-                    "repository_url": f"https://api.github.com/repos/{repo}" if repo else "",
-                    "sort_at": pr.get("closedAt") or pr.get("updatedAt") or "",
-                }
-            )
-        return normalized
+        return [normalize_search_pr(pr) for pr in json.loads(result.stdout)]
 
     q = f"is:pr author:{USERNAME} is:merged -user:{USERNAME}"
     items = []
@@ -89,20 +109,72 @@ def fetch_merged_prs(token: str, limit: int = 1000):
         )
         page_items = data.get("items", [])
         for pr in page_items:
-            pr["sort_at"] = pr.get("closed_at") or pr.get("updated_at") or ""
-        items.extend(page_items)
+            normalized = dict(pr)
+            normalized["sort_at"] = pr.get("closed_at") or pr.get("updated_at") or ""
+            normalized.setdefault("acceptance", "merged")
+            items.append(normalized)
         if len(page_items) < per_page or len(items) >= limit:
             break
     return items[:limit]
 
 
-def fetch_bot_landed_prs(limit: int = 100):
-    """Find PRs landed by project merge bots as authored commits.
+def fetch_label_bot_landed_prs(token: str) -> list[dict]:
+    """Find PRs that project merge bots close with an accepted/merged label.
 
-    Some projects, notably PyTorch, close PRs after a bot-created landing commit.
-    Those PRs are not returned by GitHub's merged PR search even though the commit
-    is correctly authored by the contributor.
+    PyTorch can land a PR through pytorchmergebot, label it "Merged", reference
+    the landing commit, and close it without GitHub setting merged=true.
     """
+    if shutil.which("gh"):
+        normalized = []
+        for repo in sorted(BOT_LANDED_REPOS):
+            cmd = [
+                "gh",
+                "search",
+                "prs",
+                "--repo",
+                repo,
+                "--author",
+                USERNAME,
+                "--state",
+                "closed",
+                "--label",
+                BOT_LANDED_LABEL,
+                "--sort",
+                "updated",
+                "--order",
+                "desc",
+                "--limit",
+                "100",
+                "--json",
+                "repository,number,title,url,closedAt,updatedAt",
+            ]
+            result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+            normalized.extend(normalize_search_pr(pr, acceptance="bot_landed") for pr in json.loads(result.stdout))
+        return normalized
+
+    items = []
+    for repo in sorted(BOT_LANDED_REPOS):
+        data = gh_get(
+            "https://api.github.com/search/issues",
+            token,
+            params={
+                "q": f"repo:{repo} is:pr author:{USERNAME} is:closed label:{BOT_LANDED_LABEL}",
+                "sort": "updated",
+                "order": "desc",
+                "per_page": 100,
+            },
+        )
+        for pr in data.get("items", []):
+            normalized = dict(pr)
+            normalized["repository_url"] = f"https://api.github.com/repos/{repo}"
+            normalized["sort_at"] = pr.get("closed_at") or pr.get("updated_at") or ""
+            normalized["acceptance"] = "bot_landed"
+            items.append(normalized)
+    return items
+
+
+def fetch_commit_bot_landed_prs(limit: int = 100) -> list[dict]:
+    """Find authored commits whose message links back to a resolved PR."""
     if not shutil.which("gh"):
         return []
 
@@ -150,6 +222,7 @@ def fetch_bot_landed_prs(limit: int = 100):
                 "number": int(number),
                 "repository_url": f"https://api.github.com/repos/{repo}",
                 "sort_at": (commit.get("committer") or {}).get("date", ""),
+                "acceptance": "bot_landed",
             }
         )
 
@@ -157,27 +230,11 @@ def fetch_bot_landed_prs(limit: int = 100):
 
 
 def fetch_contribution_prs(token: str, limit: int = 1000):
-    prs = fetch_merged_prs(token, limit=limit)
-
-    deduped = {}
-    for pr in prs:
-        repo = pr_repo_name(pr)
-        key = (repo, pr.get("number"))
-        if key not in deduped or pr.get("sort_at", "") > deduped[key].get("sort_at", ""):
-            deduped[key] = pr
-
-    sorted_prs = sorted(deduped.values(), key=lambda pr: pr.get("sort_at", ""), reverse=True)
-    return enrich_repository_stars(sorted_prs, token)
-
-
-def is_owned_repo(repo_full_name: str) -> bool:
-    owner = repo_full_name.split("/", 1)[0].lower() if "/" in repo_full_name else repo_full_name.lower()
-    return owner in {name.lower() for name in OWNED_REPO_OWNERS}
-
-
-def pr_repo_name(pr: dict) -> str:
-    repo_url = pr.get("repository_url", "")
-    return repo_url.split("/repos/")[-1] if "/repos/" in repo_url else ""
+    prs = []
+    prs.extend(fetch_label_bot_landed_prs(token))
+    prs.extend(fetch_commit_bot_landed_prs())
+    prs.extend(fetch_merged_prs(token, limit=limit))
+    return enrich_repository_stars(dedupe_prs(prs), token)
 
 
 def enrich_repository_stars(prs: list[dict], token: str) -> list[dict]:
@@ -211,9 +268,16 @@ def format_stars(stars: int) -> str:
     return f"{stars:,} stars"
 
 
-def accepted_pr_filter_url(repo_full_name: str) -> str:
-    query = urllib.parse.urlencode({"q": f"is:pr is:merged author:{USERNAME}"})
+def accepted_pr_filter_url(repo_full_name: str, bot_landed: bool = False) -> str:
+    if bot_landed:
+        query = urllib.parse.urlencode({"q": f"is:pr is:closed label:{BOT_LANDED_LABEL} author:{USERNAME}"})
+    else:
+        query = urllib.parse.urlencode({"q": f"is:pr is:merged author:{USERNAME}"})
     return f"https://github.com/{repo_full_name}/pulls?{query}"
+
+
+def merged_pr_filter_url(repo_full_name: str) -> str:
+    return accepted_pr_filter_url(repo_full_name)
 
 
 def external_prs(prs: list[dict]) -> list[dict]:
@@ -226,9 +290,10 @@ def build_project_lines(prs: list[dict]) -> list[str]:
         repo = pr_repo_name(pr)
         if not repo or is_owned_repo(repo):
             continue
-        project = projects.setdefault(repo, {"count": 0, "first_seen": position, "stars": 0})
+        project = projects.setdefault(repo, {"count": 0, "first_seen": position, "stars": 0, "bot_landed": False})
         project["count"] = int(project["count"]) + 1
         project["stars"] = max(int(project["stars"]), pr_repository_stars(pr))
+        project["bot_landed"] = bool(project["bot_landed"]) or pr.get("acceptance") == "bot_landed"
 
     sorted_projects = sorted(
         projects.items(),
@@ -237,7 +302,8 @@ def build_project_lines(prs: list[dict]) -> list[str]:
     lines = []
     for repo, data in sorted_projects:
         stars = int(data["stars"])
-        lines.append(f"- [{repo}]({accepted_pr_filter_url(repo)}) ({format_stars(stars)})")
+        url = accepted_pr_filter_url(repo, bot_landed=bool(data["bot_landed"]))
+        lines.append(f"- [{repo}]({url}) ({format_stars(stars)})")
     return lines
 
 

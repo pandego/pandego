@@ -57,6 +57,30 @@ class BuildSectionTests(unittest.TestCase):
         self.assertIn("- _No recent external merged PRs found yet._", section)
         self.assertNotIn("pandego/pandego#1", section)
 
+    def test_includes_bot_landed_pytorch_prs_with_closed_merged_label_filter(self):
+        section = build_section(
+            [
+                {
+                    "title": "[inductor] Realize conv bias input before freezing layout",
+                    "html_url": "https://github.com/pytorch/pytorch/pull/181363",
+                    "number": 181363,
+                    "repository_url": "https://api.github.com/repos/pytorch/pytorch",
+                    "repository_stars": 921000,
+                    "acceptance": "bot_landed",
+                }
+            ],
+            updated_at="2026-05-20 10:00 UTC",
+        )
+
+        self.assertIn(
+            "[pytorch/pytorch](https://github.com/pytorch/pytorch/pulls?q=is%3Apr+is%3Aclosed+label%3AMerged+author%3Apandego) (921,000 stars)",
+            section,
+        )
+        self.assertIn(
+            "[pytorch/pytorch#181363](https://github.com/pytorch/pytorch/pull/181363) - [inductor] Realize conv bias input before freezing layout",
+            section,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
