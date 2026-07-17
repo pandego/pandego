@@ -33,24 +33,24 @@ My tech stack combines modern AI with production-proven tools:
 ## 🧩 OSS Contributor Activity (auto-updated)
 
 **Projects contributed to:**
-- [openclaw/openclaw](https://github.com/openclaw/openclaw/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (383,090 stars)
-- [open-webui/open-webui](https://github.com/open-webui/open-webui/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (145,595 stars)
-- [pytorch/pytorch](https://github.com/pytorch/pytorch/pulls?q=is%3Apr+is%3Aclosed+label%3AMerged+author%3Apandego) (101,848 stars)
-- [BerriAI/litellm](https://github.com/BerriAI/litellm/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (53,749 stars)
-- [oobabooga/textgen](https://github.com/oobabooga/textgen/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (47,451 stars)
-- [exo-explore/exo](https://github.com/exo-explore/exo/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (46,301 stars)
-- [jamiepine/voicebox](https://github.com/jamiepine/voicebox/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (41,673 stars)
-- [agno-agi/agno](https://github.com/agno-agi/agno/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (41,188 stars)
-- [PrefectHQ/fastmcp](https://github.com/PrefectHQ/fastmcp/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (26,227 stars)
-- [deepset-ai/haystack](https://github.com/deepset-ai/haystack/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (25,909 stars)
-- [gastownhall/beads](https://github.com/gastownhall/beads/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (25,360 stars)
-- [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (18,564 stars)
-- [RightNow-AI/openfang](https://github.com/RightNow-AI/openfang/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (18,015 stars)
-- [Arize-ai/phoenix](https://github.com/Arize-ai/phoenix/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10,583 stars)
-- [VoltAgent/voltagent](https://github.com/VoltAgent/voltagent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10,058 stars)
-- [PeonPing/peon-ping](https://github.com/PeonPing/peon-ping/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (4,943 stars)
-- [aurelio-labs/semantic-router](https://github.com/aurelio-labs/semantic-router/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (3,718 stars)
-- [docker/docker-agent](https://github.com/docker/docker-agent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (3,188 stars)
+- [openclaw/openclaw](https://github.com/openclaw/openclaw/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (383,215 stars)
+- [open-webui/open-webui](https://github.com/open-webui/open-webui/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (145,715 stars)
+- [pytorch/pytorch](https://github.com/pytorch/pytorch/pulls?q=is%3Apr+is%3Aclosed+label%3AMerged+author%3Apandego) (101,724 stars)
+- [BerriAI/litellm](https://github.com/BerriAI/litellm/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (53,833 stars)
+- [oobabooga/textgen](https://github.com/oobabooga/textgen/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (47,456 stars)
+- [exo-explore/exo](https://github.com/exo-explore/exo/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (46,336 stars)
+- [jamiepine/voicebox](https://github.com/jamiepine/voicebox/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (41,961 stars)
+- [agno-agi/agno](https://github.com/agno-agi/agno/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (41,200 stars)
+- [PrefectHQ/fastmcp](https://github.com/PrefectHQ/fastmcp/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (26,240 stars)
+- [deepset-ai/haystack](https://github.com/deepset-ai/haystack/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (25,922 stars)
+- [gastownhall/beads](https://github.com/gastownhall/beads/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (25,384 stars)
+- [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (18,607 stars)
+- [RightNow-AI/openfang](https://github.com/RightNow-AI/openfang/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (18,022 stars)
+- [Arize-ai/phoenix](https://github.com/Arize-ai/phoenix/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10,596 stars)
+- [VoltAgent/voltagent](https://github.com/VoltAgent/voltagent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (10,070 stars)
+- [PeonPing/peon-ping](https://github.com/PeonPing/peon-ping/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (4,947 stars)
+- [aurelio-labs/semantic-router](https://github.com/aurelio-labs/semantic-router/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (3,723 stars)
+- [docker/docker-agent](https://github.com/docker/docker-agent/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (3,192 stars)
 - [DEEP-PolyU/LinearRAG](https://github.com/DEEP-PolyU/LinearRAG/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (524 stars)
 - [afaqueumer/DocQA](https://github.com/afaqueumer/DocQA/pulls?q=is%3Apr+is%3Amerged+author%3Apandego) (295 stars)
 
@@ -66,7 +66,7 @@ My tech stack combines modern AI with production-proven tools:
 - [PeonPing/peon-ping#491](https://github.com/PeonPing/peon-ping/pull/491) - fix: tighten Linux terminal focus detection
 - [gastownhall/beads#3456](https://github.com/gastownhall/beads/pull/3456) - fix: support Jira Cloud token pagination
 
-_Last updated: 2026-07-16 08:33 UTC_
+_Last updated: 2026-07-17 08:27 UTC_
 <!-- OSS_END -->
 
 ## 🔐 About Private Work
